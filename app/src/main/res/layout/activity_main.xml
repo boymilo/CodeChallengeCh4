@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDEAF6"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/Judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:rotation="-30"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/comic"
+            android:text="Kertas"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="38dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-10dp"
+            android:fontFamily="@font/comic"
+            android:text="Gunting"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="38dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-10dp"
+            android:fontFamily="@font/comic"
+            android:text="Batu"
+            android:textColor="@android:color/holo_purple"
+            android:textSize="38dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/comic"
+        android:text="Pemain 1"
+        android:textColor="#259DCF"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Judul" />
+
+    <TextView
+        android:id="@+id/tvVS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:fontFamily="@font/comic"
+        android:rotation="-30"
+        android:text="VS"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="80dp"
+        app:layout_constraintLeft_toRightOf="@id/ivGunting"
+        app:layout_constraintRight_toLeftOf="@id/ivGuntingCom"
+        app:layout_constraintTop_toBottomOf="@id/Judul" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="149dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="210dp"
+        android:background="@android:color/holo_green_light"
+        android:fontFamily="@font/comic"
+        android:gravity="center_horizontal"
+        android:rotation="-30"
+        android:text="Pemain 1 MENANG!"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="25dp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toRightOf="@id/ivGunting"
+        app:layout_constraintRight_toLeftOf="@id/ivGuntingCom"
+        app:layout_constraintTop_toBottomOf="@id/Judul" />
+
+    <TextView
+        android:id="@+id/tvDraw"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="210dp"
+        android:background="#0070C0"
+        android:fontFamily="@font/comic"
+        android:gravity="center_horizontal"
+        android:rotation="-30"
+        android:text="DRAW!"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="25dp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toRightOf="@id/ivGunting"
+        app:layout_constraintRight_toLeftOf="@id/ivGuntingCom"
+        app:layout_constraintTop_toBottomOf="@id/Judul" />
+
+    <ImageView
+        android:id="@+id/ivKertas"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_background"
+        android:src="@drawable/kertas"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBatu" />
+
+    <ImageView
+        android:id="@+id/ivGunting"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_background"
+        android:src="@drawable/gunting"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivKertas" />
+
+    <ImageView
+        android:id="@+id/ivBatu"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_background"
+        android:src="@drawable/ic_batu"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPlayer" />
+
+    />
+
+    <TextView
+        android:id="@+id/tvCom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/comic"
+        android:text="COM"
+        android:textColor="#259DCF"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Judul" />
+
+    <ImageView
+        android:id="@+id/ivKertasCom"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/ic_background"
+        android:src="@drawable/kertas"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBatuCom" />
+
+    <ImageView
+        android:id="@+id/ivGuntingCom"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/ic_background"
+        android:src="@drawable/gunting"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivKertasCom" />
+
+    <ImageView
+        android:id="@+id/ivBatuCom"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/ic_background"
+        android:src="@drawable/ic_batu"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCom" />
+
+    />
+
+    <ImageView
+        android:id="@+id/ivNewGame"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/ic_refresh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
